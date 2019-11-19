@@ -10,7 +10,19 @@
     <button>Click!</button>
 
     <script>
-        console.log('the game is starting');
+        let counter = 0;
+
+        document.querySelector('button').addEventListener('click', () => {
+            ++ counter;
+        });
+
+        setTimeout(() => {
+            if (counter > 5) {
+                alert('You won. You had this many click: ' + counter);
+            } else {
+                alert('Aww, you lost.');
+            }
+        }, 2000) // to wait 2,000 millisecond before executing a function
     </script>
 </body>
 </html>
